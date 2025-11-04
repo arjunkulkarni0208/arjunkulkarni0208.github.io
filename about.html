@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About — Arjun Kulkarni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Arjun Kulkarni</a>
+      <nav class="main-nav" id="mainNavAbout">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="navToggleAbout" class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-me">
+      <h1 class="scribble">About</h1>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="assets/profile.jpg" alt="Profile photo">
+        </div>
+        <div class="about-text">
+          <p>Write your bio here — who you are, what you build, what you care about. Replace this placeholder with your real content. Mention skills, interests, notable projects, education, etc.</p>
+          <h3>Skills</h3>
+          <ul class="skills">
+            <li>HTML / CSS / JS</li>
+            <li>Embedded systems & Arduino</li>
+            <li>Python / Linux / Raspberry Pi</li>
+            <li>Audio & Music production</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Arjun Kulkarni</strong>
+        <p>Maker • Developer • Musician</p>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="GitHub" class="social">GH</a>
+        <a href="#" aria-label="LinkedIn" class="social">in</a>
+        <a href="#" aria-label="Twitter" class="social">tw</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year2"></span> Arjun Kulkarni</div>
+  </footer>
+
+<script>
+  document.getElementById('year2').textContent = new Date().getFullYear();
+  document.getElementById('navToggleAbout').addEventListener('click', ()=> {
+    document.getElementById('mainNavAbout').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
