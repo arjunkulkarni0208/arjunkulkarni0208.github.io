@@ -1,25 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why did the scarecrow win an award?</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Arjun Kulkarni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Joke Central!</h1>
-        <p>A place where you can laugh and have a great time!</p>
-    </header>
-    <main>
-        <section class="joke-container">
-            <div class="joke-question">Why did the scarecrow win an award?</div>
-            <div class="joke-answer">Because he was outstanding in his field!</div>
-        </section>
-        <button class="get-next-joke-btn">Get Next Joke</button>
-    </main>
-    <footer>
-        <p>&copy; 2023 Joke Central. All rights reserved.</p>
-    </footer>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Arjun Kulkarni</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="scribble">Welcome — I build stuff</h1>
+          <p>Designer, developer and electronics tinkerer. I love music, coffee, and tiny hardware projects.</p>
+          <p><a class="btn" href="projects.html">See Projects</a></p>
+        </div>
+        <div class="hero-image">
+          <img src="assets/hero.jpg" alt="Hero image (replace in assets folder)">
+        </div>
+      </div>
+    </section>
+
+    <section class="summary container">
+      <div class="card">
+        <h3>Featured Project</h3>
+        <p>Short description of your featured project. Replace this text with real content and link to the project page.</p>
+        <p><a class="link" href="projects.html">View Projects →</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Blog</h3>
+        <p>Latest thoughts, tutorials and writeups.</p>
+        <p><a class="link" href="blog.html">Read the Blog →</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Want to collaborate? Ping me.</p>
+        <p><a class="link" href="contact.html">Contact →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Arjun Kulkarni</strong>
+        <p>Maker • Developer • Musician</p>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="GitHub" class="social">GH</a>
+        <a href="#" aria-label="LinkedIn" class="social">in</a>
+        <a href="#" aria-label="Twitter" class="social">tw</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Arjun Kulkarni</div>
+  </footer>
+
+<script>
+  // small nav toggler
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+
+  // current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
