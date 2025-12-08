@@ -21,6 +21,74 @@ body{
   -webkit-text-size-adjust:100%;
 }
 
+/* Coffee Button Container */
+.coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #FFDD00; /* BMC Brand Color */
+  color: #000;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif; /* Match your font */
+  font-weight: bold;
+  border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Hover Effects: Lift up and Shadow */
+.coffee-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 221, 0, 0.4);
+}
+
+/* The Coffee Mug Icon */
+.coffee-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Creating the Steam Animation */
+.coffee-btn:hover .coffee-icon::before,
+.coffee-btn:hover .coffee-icon::after {
+  content: "s"; /* Shape for steam */
+  position: absolute;
+  top: -10px;
+  left: 2px;
+  width: 6px;
+  height: 10px;
+  background: transparent;
+  color: #000; /* Steam color */
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  opacity: 0;
+  animation: steam 1.5s infinite linear;
+}
+
+.coffee-btn:hover .coffee-icon::after {
+  left: 10px;
+  animation-delay: 0.5s;
+}
+
+/* Keyframes for the Steam rising */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-15px) scale(1.5);
+    opacity: 0;
+  }
+}
+
 /* Utility container */
 .container{
   width:calc(100% - 2rem);
