@@ -28,10 +28,11 @@ body{
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background-color: --coffee;
+  background-color: --coffee-dark;
   color: #000;
   text-decoration: none;
   font-family: 'Cookie', cursive;
+  font-weight: 'bold';
   border-radius: 30px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
