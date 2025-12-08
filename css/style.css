@@ -21,16 +21,17 @@ body{
   -webkit-text-size-adjust:100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 /* Coffee Button Container */
 .coffee-btn {
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
-  background-color: #FFDD00; /* BMC Brand Color */
+  background-color: --coffee;
   color: #000;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif; /* Match your font */
-  font-weight: bold;
+  font-family: 'Cookie', cursive;
   border-radius: 30px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
